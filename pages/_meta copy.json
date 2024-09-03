@@ -1,7 +1,8 @@
 {
   "index": "Introduction",
-  "faq": "FAQ",
-  "fileshare": "Files to Share",
+  "another": "Another Page",
+  "yetanother": "Yet Another Page",
+  "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
     "type": "page"
