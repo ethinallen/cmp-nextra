@@ -6,13 +6,11 @@ const config: DocsThemeConfig = {
   project: {
     link: 'https://github.com/ethinallen/cmp-nextra',
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+
+  docsRepositoryBase: 'https://github.com/ethinallen/cmp-nextra',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Critical Mass Princeton',
   },
 }
 
-export default config
+export default config;
