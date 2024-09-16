@@ -5,11 +5,12 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta property="og:title" content="Critical Mass Princeton" />
-          <meta property="og:description" content="Join the community bicycle ride in Princeton. Open to all!" />
-          <meta property="og:image" content="https://cdn.andrewemery.io/bkg.png" />
-          <meta property="og:url" content="https://cmp.bike" />
-          <meta property="og:type" content="website" />
+            <title>Can literally anything go here?</title>
+            <meta property="og:title" content="Critical Mass Princeton" />
+            <meta property="og:description" content="Join the community bicycle ride in Princeton. Open to all!" />
+            <meta property="og:image" content="https://cdn.andrewemery.io/bkg.png" />
+            <meta property="og:url" content="https://cmp.bike" />
+            <meta property="og:type" content="website" />
           {/* Other head elements */}
         </Head>
         <body>
