@@ -1,6 +1,9 @@
 import LazyLoadComponent from '../components/LazyLoadComponent';
 import { useState, useEffect } from 'react';
 
+import InstagramEmbed from '../components/InstagramEmbed';
+
+
 # Welcome to Critical Mass Princeton
 
 Critical Mass Princeton is a community bike ride to give everyone the opportunity to 
@@ -18,6 +21,12 @@ local issues and, above all else, <u>bring people together</u>.
 
 [Learn more about Critical Mass on Wikipedia](https://en.wikipedia.org/wiki/Critical_Mass_(cycling))
 
+
+## Link to Socialzzz
+<InstagramEmbed url="https://www.instagram.com/criticalmassprinceton/" />
+
+
+---
 export function WhenAndWhere() {
   const [date, setDate] = useState('');
 
@@ -43,6 +52,7 @@ export function WhenAndWhere() {
     </div>
   );
 }
+
 
 <WhenAndWhere />
 ---
