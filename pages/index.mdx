@@ -1,4 +1,5 @@
 import LazyLoadComponent from '../components/LazyLoadComponent';
+import { useState, useEffect } from 'react';
 
 # Welcome to Critical Mass Princeton
 
@@ -17,23 +18,37 @@ local issues and, above all else, <u>bring people together</u>.
 
 [Learn more about Critical Mass on Wikipedia](https://en.wikipedia.org/wiki/Critical_Mass_(cycling))
 
-## The Route
+export function WhenAndWhere() {
+  const [date, setDate] = useState('');
+
+  useEffect(() => {
+    const getLastFriday = (year, month) => {
+      const lastDay = new Date(year, month + 1, 0);
+      const day = lastDay.getDay();
+      const lastFriday = lastDay.getDate() - ((day + 2) % 7);
+      return new Date(year, month, lastFriday);
+    };
+
+    const today = new Date();
+    const lastFriday = getLastFriday(today.getFullYear(), today.getMonth());
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    setDate(lastFriday.toLocaleDateString(undefined, options));
+  }, []);
+
+  return (
+    <div>
+      <h2>When and Where</h2>
+      <p>We meet on the <u>last Friday of every month</u> at 6:30 PM and roll out at 7:00 PM.</p>
+      <h3><p><b>Next meeting date:</b> <u>{date}</u></p></h3>
+    </div>
+  );
+}
+
+<WhenAndWhere />
+---
 
 <LazyLoadComponent page="route" />
 
-## Frequently Asked Questions
-
 <LazyLoadComponent page="faq" />
 
-## Talking About the Ride
-
 <LazyLoadComponent page="messaging" />
-
-## About
-
-<LazyLoadComponent page="about" />
-
-## Join Us
-
-Interested in joining our next ride? Check out the [event details](details) for more 
-information on how to get involved.
