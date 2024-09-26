@@ -1,8 +1,5 @@
 {
   "index": "Home",
-  "messaging" : "Talk about the ride",
-  "route" : "The Route",
-  "faq": "FAQ",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
