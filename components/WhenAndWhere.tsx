@@ -12,7 +12,14 @@ const WhenAndWhere = () => {
     };
 
     const today = new Date();
-    const lastFriday = getLastFriday(today.getFullYear(), today.getMonth());
+    let lastFriday = getLastFriday(today.getFullYear(), today.getMonth());
+
+    if (lastFriday < today) {
+      const nextMonth = today.getMonth() + 1;
+      const year = nextMonth > 11 ? today.getFullYear() + 1 : today.getFullYear();
+      lastFriday = getLastFriday(year, nextMonth % 12);
+    }
+
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
     setDate(lastFriday.toLocaleDateString(undefined, options));
   }, []);
