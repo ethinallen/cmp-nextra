@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
@@ -16,9 +17,11 @@ const config: DocsThemeConfig = {
     </>
   ),
   useNextSeoProps() {
-    return {
-      titleTemplate: '%s – Critical Mass Princeton',
+    const { asPath } = useRouter()
+    if (asPath === '/') {
+      return { title: 'Critical Mass Princeton' }
     }
+    return { titleTemplate: '%s – Critical Mass Princeton' }
   },
   docsRepositoryBase: 'https://github.com/ethinallen/cmp-nextra',
   footer: {
