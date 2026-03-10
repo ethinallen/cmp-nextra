@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <title>Critical Mass Princeton</title>
             <meta property="og:title" content="Critical Mass Princeton" />
             <meta property="og:description" content="Join the community bicycle ride in Princeton. Open to all!" />
             <meta property="og:image" content="https://cdn.andrewemery.io/cruiser_image.webp" />
